@@ -17,7 +17,7 @@ namespace ElisesWpfApp
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            MainWindow = new MainWindow()
+            MainWindow = new MainView()
             {
                 DataContext = new MainViewModel("Elise")
             };

@@ -10,11 +10,15 @@ namespace ElisesWpfApp.ViewModels
         public string FirstName { get; set; }
         public ICommand SendButtonCommand { get; }
 
+        public PatientsViewModel Patients { get; set; }
+
         public MainViewModel(string firstName)
         {
             FirstName = firstName;
 
             SendButtonCommand = new DelegateCommand(DoSend);
+
+            Patients = new PatientsViewModel();
         }
 
         private void RaisePropertyChanged(string property) 

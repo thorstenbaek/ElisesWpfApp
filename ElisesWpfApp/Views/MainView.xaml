@@ -1,15 +1,17 @@
-﻿<Window x:Class="ElisesWpfApp.Views.MainWindow"
+﻿<Window x:Class="ElisesWpfApp.Views.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ElisesWpfApp"
+        xmlns:local="clr-namespace:ElisesWpfApp" xmlns:views="clr-namespace:ElisesWpfApp.Views"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
     <Grid>
-        <Label Content="Fornavn" HorizontalAlignment="Left" Margin="74,51,0,0" VerticalAlignment="Top"/>
+        <!--<Label Content="Fornavn" HorizontalAlignment="Left" Margin="74,51,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="81,82,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Send" HorizontalAlignment="Left" Margin="587,338,0,0" VerticalAlignment="Top" Width="75" Command="{Binding SendButtonCommand}"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="587,338,0,0" VerticalAlignment="Top" Width="75" Command="{Binding SendButtonCommand}"/>-->
 
+        <views:Patients DataContext="{Binding Patients}"></views:Patients>
+        
     </Grid>
 </Window>
