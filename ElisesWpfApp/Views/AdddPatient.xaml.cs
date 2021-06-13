@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace ElisesWpfApp.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AdddPatient.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class AdddPatient : UserControl
     {
-        public MainView()
+        public AdddPatient()
         {
             InitializeComponent();
-        }
-
-        private void AddPatient(object sender, RoutedEventArgs e)
-        {
-            NewPatient newPatient = new NewPatient();
-            newPatient.Show();
-          
         }
     }
 }

@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ElisesWpfApp.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NewPatient.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class NewPatient : Window
     {
-        public MainView()
+        public NewPatient()
         {
             InitializeComponent();
-        }
-
-        private void AddPatient(object sender, RoutedEventArgs e)
-        {
-            NewPatient newPatient = new NewPatient();
-            newPatient.Show();
-          
         }
     }
 }
