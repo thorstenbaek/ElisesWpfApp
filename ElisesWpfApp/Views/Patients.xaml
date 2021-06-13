@@ -15,6 +15,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-            
+        <TextBlock Text="Hello"/>
+
     </Grid>
 </UserControl>
