@@ -11,14 +11,29 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="81,82,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Width="120"/>
         <Button Content="Send" HorizontalAlignment="Left" Margin="587,338,0,0" VerticalAlignment="Top" Width="75" Command="{Binding SendButtonCommand}"/>-->
 
-        <views:Patients DataContext="{Binding Patients}"></views:Patients>
+        
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Patients" Grid.Column="1" Grid.Row="1"/>
+
+        <Button Content="+" Grid.Column="2" Grid.Row="3"/>
+
+        <views:Patients DataContext="{Binding Patients}" Grid.Column="1" Grid.Row="2"></views:Patients>
+
+
     </Grid>
 </Window>
