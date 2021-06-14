@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace ElisesWpfApp.Views
 {
@@ -22,6 +23,22 @@ namespace ElisesWpfApp.Views
         public NewPatient()
         {
             InitializeComponent();
+
+
+
+        }
+
+        private void SavePatientBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string filePath = @"C:\Users\eec\Documents\oveWPF\patients2.txt";
+            // string[] lines = File.ReadAllLines(filePath);
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+
+
+            lines.Add("Vibeke, Easter, 53");
+            File.WriteAllLines(filePath, lines);
+
         }
     }
 }
